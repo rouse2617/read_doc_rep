@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>boost 库 &mdash; 知识库 v1.0 文档</title>
+  <title>有时间汇总 &mdash; 知识库 v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -75,7 +75,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">boost 库</li>
+      <li class="breadcrumb-item active">有时间汇总</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Cpp/c++ &amp;&amp; boost特性.md.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -109,8 +109,88 @@
 <p><strong>柔性数组</strong></p>
 <p>futex  什么做是？</p>
 <hr class="docutils" />
+<section id="id1">
+<h1>有时间汇总<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<p>debuginfo</p>
+<p>gdb 原理</p>
+<p>cache miss</p>
+<p><img alt="image-20230423174730014" src="C:/Users/h00165/AppData/Roaming/Typora/typora-user-images/image-20230423174730014.png" /></p>
+<section id="elf">
+<h2>代码编译流程–&gt; 四个步骤 ，实现原理？elf？<a class="headerlink" href="#elf" title="此标题的永久链接"></a></h2>
+</section>
+<section id="id2">
+<h2>编译连接怎么弄？？ 怎么用动态库？？<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<p><strong>kill -10</strong></p>
+<p><strong>memchr</strong></p>
+<p><strong>prctl</strong></p>
+<p><strong>flock</strong></p>
+<p><strong>fcntl</strong></p>
+<p><strong>ceph中的 自旋锁实现</strong></p>
+<p><strong>socketpair</strong></p>
+<p><strong>setsid</strong></p>
+<p><strong>statfs</strong></p>
+<p><strong>fstatfs</strong></p>
+<p><strong>readlink</strong></p>
+<p><strong>O_CLOEXEC</strong></p>
+<p><strong>pipe2(pipefd, O_CLOEXEC);</strong></p>
+<p><strong>noexcept</strong></p>
+<p><strong>sockaddr_un</strong></p>
+<p><strong>std::piecewise_construct,</strong></p>
+<p><strong>ceph 加锁？？</strong></p>
+<p><strong>std::function</strong></p>
+<p><strong>typeid 打印出函数名字？</strong></p>
+<p><strong>__thread 代表含义 （C++ 11后才支持）</strong></p>
+<p><strong>__tls_get_addr??? TLS是啥</strong></p>
+<blockquote>
+<div><p><strong>程序编译的流程？？？</strong></p>
+<p><strong>LTO ??</strong></p>
+<p><strong>软连接和硬链接</strong></p>
+</div></blockquote>
+<p><strong>atomic</strong></p>
+<p><strong>fsync()</strong></p>
+<p><strong>posix_fadvise（）</strong></p>
+<p><strong>std::mem_fn</strong></p>
+<p><strong>什么 是管程？</strong></p>
+<p><strong>构造函数 =default</strong></p>
+<p><strong>using 用法</strong></p>
+<p><strong>make_unique</strong></p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>网络<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<p>三层 四层 七层网络</p>
+<p>TCP_NODELAY 合并小的TCP包为一个大的TCP包，避免过多的小的TCP的报文的TCP头部浪费网络带宽</p>
+<p>互斥锁原理</p>
+<p>std::make_unique</p>
+<p>fio 4M 和 fio 5M 为什么相差那么大</p>
+<p>xatrr  和  omap 和  map_hander</p>
+<p>网卡 irq 绑定？  中断 ？ 网卡收发包原理？  cpu 缓存？</p>
+<p>eBPF 概念 了解</p>
+<p>DPDK、SPDK、RDMA、NUMA</p>
+<p>nvmeof</p>
+<p>各种磁盘  IO 性能 ，一个IO 多长时间（SSD ，HDD ）？ （多种IO模型 对应 那些类型的）如何缓解？ 多读少写，少写多读对应的场景，加了ssdcache 有什么问题？</p>
+<p>bond网卡？？？各种模式 ？</p>
+<p>一些 类的实现</p>
+<p><img alt="image-20230329110806447" src="http://img.rui.vin/202303291108543.png" /></p>
+<p>CHAP认证 ？ 加强吧版本的三次握手？</p>
+<p>ceph osd perf</p>
+<p><img alt="image-20230531235202076" src="Cpp/img.rui.vin/image-20230531235202076.png" /></p>
+<p>![image-20220909175628016](http://img.rui.vin/202209091756060.png</p>
+<img src="http://img.rui.vin/202209091742630.png"/>	<p>pthread_rwlock_init</p>
+<p><img alt="image-20220909174229533" src="http://img.rui.vin/202209091742630.png" /></p>
+<p>无锁编程 __sync_fetch_and_add <a class="reference external" href="https://www.cnblogs.com/lyggqm/p/6208218.html">多线程无锁编程–原子计数操作：__sync_fetch_and_add等12个操作</a></p>
+</section>
+</section>
+<section id="out-of-band">
+<h1><a class="reference external" href="https://www.cnblogs.com/lvdongjie/p/12915137.html">带外(out of band)数据</a><a class="headerlink" href="#out-of-band" title="此标题的永久链接"></a></h1>
+<ol>
+<li><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">余江那边</span>   <span class="n">有个</span> <span class="n">OEM的项目</span>   <span class="n">yinw</span>
+</pre></div>
+</div>
+</li>
+</ol>
 <section id="boost">
-<h1>boost 库<a class="headerlink" href="#boost" title="此标题的永久链接"></a></h1>
+<h2>boost 库<a class="headerlink" href="#boost" title="此标题的永久链接"></a></h2>
 <p>​	 asio</p>
 <p>​	 boost::intrusive</p>
 <p>​</p>
@@ -130,6 +210,7 @@ inline void spin_lock(std::atomic_flag&amp; lock)
 <p>put 流程</p>
 <p>测试</p>
 <p>继续看 excu</p>
+</section>
 </section>
 
 
