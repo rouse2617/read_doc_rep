@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>单例模式 &mdash; 知识库 v1.0 文档</title>
+  <title>C/C++语法方面 &mdash; 知识库 v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -44,7 +44,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <p class="caption" role="heading"><span class="caption-text">语法相关</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Cpp/index.html">cpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Cpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#boost">boost</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">分布式基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../distributed/index.html">分布式基础</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">书籍记录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../book_by_study/index.html">DDIA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../book_by_study/index.html#c">C++并发编程实践</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">关于我</span></p>
 <ul>
@@ -65,9 +75,9 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">单例模式</li>
+      <li class="breadcrumb-item active">C/C++语法方面</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/DDIA/SSTable.md.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../_sources/Cpp/C++总结 copy.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
   </ul>
   <hr/>
@@ -75,46 +85,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>这段时间重新捡起以前没看完的 《DDIA》 ，这次要准备起沉下心来，好好的读一读，为此这里开一个专栏记录（看了之后 没输出总是有点虚的）</p>
+  <section id="c-c">
+<h1>C/C++语法方面<a class="headerlink" href="#c-c" title="此标题的永久链接"></a></h1>
+</section>
 <section id="id1">
-<h1>单例模式<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
-<p>这是单例模式</p>
+<h1>一级标题<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
 <section id="id2">
 <h2>二级标题<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>这是单例模式</p>
-</section>
-<section id="sstable-lsm-tree">
-<h2>SSTable –&gt;  LSM tree<a class="headerlink" href="#sstable-lsm-tree" title="此标题的永久链接"></a></h2>
-<p>我们存放数据是可以用 key-value的形式来存，现在我们使用最简单的方式存</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;{key : value  }&quot;</span> <span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">file</span>
-</pre></div>
-</div>
-<p>这是一种很简单的方法，后续续集存的话使用  &gt;&gt; 追加即可</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;{key1 : value1  }&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">file</span>
-</pre></div>
-</div>
-<p>我们要查找的话，通过key来找，我们直接用grep 过滤出来即可</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;key&quot;</span> <span class="n">db</span><span class="o">.</span><span class="n">file</span>
-</pre></div>
-</div>
-<p>以上是较为简单的一种数据存储实现方式，优势在于直接在尾部追加写，有着非常好的性能（顺序IO），这里和日志一样；但这里有几个问题</p>
-<ul class="simple">
-<li><p>查找效率</p></li>
-<li><p>修改已存在的kv值</p></li>
-<li><p>文件增长</p></li>
-<li><p>kv 信息丢失</p></li>
-</ul>
 <section id="id3">
-<h3>查找效率<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h3>
-</section>
+<h3>三级标题<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h3>
 <section id="id4">
-<h3>哈希索引<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
+<h4>四级标题<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h4>
+<section id="id5">
+<h5>五级标题<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h5>
+<section id="id6">
+<h6>六级标题<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h6>
+<p><strong>强调</strong></p>
+<p><em>斜体</em></p>
+<p><code class="docutils literal notranslate"><span class="pre">monospace,会变色，具体作用不清楚</span></code></p>
 </section>
-<section id="b">
-<h3>B树<a class="headerlink" href="#b" title="此标题的永久链接"></a></h3>
+</section>
+</section>
+</section>
+<section id="id7">
+<h3>无序列表<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>有序列表<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h3>
+<p>支持数字、大小写字母和罗马数字</p>
+<ol class="arabic simple">
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+<li><p>hhhhhhhh</p></li>
+</ol>
+<p>ftruncate
+int ftruncate(int fd, off_t  length)
+改函数可以用于扩展文件大小，但并没有向磁盘写数据，是用 0来填充</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#此命令在主机执行</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python</span>
+<span class="n">echo</span> <span class="s2">&quot;helloworld,this is a script test!&quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>

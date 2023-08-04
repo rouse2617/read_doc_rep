@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cpp &mdash; 知识库 v1.0 文档</title>
+  <title>Cpp &mdash; 知识库 v1.0 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
     <link rel="author" title="关于此文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="C/C++语法方面" href="C%2B%2B%E6%80%BB%E7%BB%93.html" />
+    <link rel="next" title="基础命令（汇总）" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html" />
     <link rel="prev" title="Indices and tables" href="../index.html" /> 
 </head>
 
@@ -46,12 +46,13 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <p class="caption" role="heading"><span class="caption-text">语法相关</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">cpp</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C%2B%2B%E6%80%BB%E7%BB%93.html">C/C++语法方面</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cpp</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html">基础命令（汇总）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#shell">常用 shell 脚本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#docker">docker 命令</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id15">三剑客</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C%2B%2B%E6%80%BB%E7%BB%93.html">C/C++语法方面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst%E5%91%BD%E4%BB%A4.html">rst命令</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#boost">boost</a><ul>
@@ -88,7 +89,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">cpp</li>
+      <li class="breadcrumb-item active">Cpp</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Cpp/index.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -99,13 +100,9 @@
            <div itemprop="articleBody">
              
   <section id="cpp">
-<h1>cpp<a class="headerlink" href="#cpp" title="此标题的永久链接"></a></h1>
+<h1>Cpp<a class="headerlink" href="#cpp" title="此标题的永久链接"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="C%2B%2B%E6%80%BB%E7%BB%93.html">C/C++语法方面</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C%2B%2B%E6%80%BB%E7%BB%93.html#ftruncate">ftruncate</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html">基础命令（汇总）</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id2">统计全部文件行数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#scp">scp命令</a></li>
@@ -124,14 +121,29 @@
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#tr">tr去除指定 字符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#core">开启 core 文件生成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id7">网络工具</a></li>
-<li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#gdb">gdb方面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#gdb">gdb方面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id8">调试传入参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id9">gdb 格式化打印</a></li>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id10">在其他文件下打断点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id11">在线调试</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#shell">常用 shell 脚本</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id12">批量解压   压缩</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#ls">ls显示 路径</a></li>
-<li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id13">shlle 中map 用法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#for-while">循环结构 for while</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id13">shlle 中map 用法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#if-else">if else 基本用法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id14">判断文件操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#case">case</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#for-while">循环结构 for while</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#for">for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#while">while</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#docker">docker 命令</a></li>
@@ -139,6 +151,16 @@
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#grep">grep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#awk">awk</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#sed">sed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="C%2B%2B%E6%80%BB%E7%BB%93.html">C/C++语法方面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst%E5%91%BD%E4%BB%A4.html">rst命令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst%E5%91%BD%E4%BB%A4.html#id1">二级标题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst%E5%91%BD%E4%BB%A4.html#id2">三级标题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst%E5%91%BD%E4%BB%A4.html#id6">无序列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst%E5%91%BD%E4%BB%A4.html#id7">有序列表</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -162,7 +184,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="../index.html" class="btn btn-neutral float-left" title="Indices and tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="C%2B%2B%E6%80%BB%E7%BB%93.html" class="btn btn-neutral float-right" title="C/C++语法方面" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html" class="btn btn-neutral float-right" title="基础命令（汇总）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
