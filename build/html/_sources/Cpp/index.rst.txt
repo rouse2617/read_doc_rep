@@ -8,7 +8,6 @@ Cpp
    
    基础命令
    C++总结.rst
-   rst命令.rst
 
 
 
