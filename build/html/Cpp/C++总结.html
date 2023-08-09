@@ -51,7 +51,10 @@
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#shell">常用 shell 脚本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#docker">docker 命令</a></li>
 <li class="toctree-l2"><a class="reference internal" href="%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html#id15">三剑客</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">C/C++语法方面</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C/C++语法方面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ftruncate">ftruncate</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#boost">boost</a></li>
@@ -68,6 +71,7 @@
 <p class="caption" role="heading"><span class="caption-text">文档书写指南</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst%E5%91%BD%E4%BB%A4.html">rst命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst%E5%91%BD%E4%BB%A4.html#id4">一级标题</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">about</span></p>
 <ul>
@@ -101,14 +105,19 @@
              
   <section id="c-c">
 <h1>C/C++语法方面<a class="headerlink" href="#c-c" title="此标题的永久链接"></a></h1>
-<p>ftruncate
-int ftruncate(int fd, off_t  length)
-改函数可以用于扩展文件大小，但并没有向磁盘写数据，是用 0来填充</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#此命令在主机执行</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python</span>
-<span class="n">echo</span> <span class="s2">&quot;helloworld,this is a script test!&quot;</span>
+<section id="ftruncate">
+<h2>ftruncate<a class="headerlink" href="#ftruncate" title="此标题的永久链接"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>int<span class="w"> </span>ftruncate<span class="o">(</span>int<span class="w"> </span>fd,<span class="w"> </span>off_t<span class="w">  </span>length<span class="o">)</span>
+改函数可以用于扩展文件大小，但并没有向磁盘写数据，是用<span class="w"> </span>0来填充
+
+int<span class="w"> </span><span class="nv">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>open<span class="o">(</span><span class="s2">&quot;test.txt&quot;</span>,<span class="w"> </span>O_CREAT<span class="w"> </span><span class="p">|</span><span class="w"> </span>O_WRONLY<span class="w"> </span><span class="p">|</span><span class="w"> </span>O_TRUNC,<span class="w"> </span><span class="m">0666</span><span class="o">)</span><span class="p">;</span>
+ftruncate<span class="o">(</span>fd,<span class="w"> </span><span class="m">1000</span><span class="o">)</span><span class="w">    </span>//扩容1000个字节
 </pre></div>
 </div>
+<div class="highlight-python notranslate" id="this-py"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Explicit is better than implicit.&#39;</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 

@@ -63,6 +63,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#shlle-map">shlle 中map 用法</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#watch">watch 命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tr">tr去除指定 字符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux 定时器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#core">开启 core 文件生成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id7">网络工具</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gdb">gdb方面</a><ul>
@@ -114,6 +115,7 @@
 <p class="caption" role="heading"><span class="caption-text">文档书写指南</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst%E5%91%BD%E4%BB%A4.html">rst命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst%E5%91%BD%E4%BB%A4.html#id4">一级标题</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">about</span></p>
 <ul>
@@ -371,6 +373,26 @@ Swap:<span class="w">            </span>0B<span class="w">          </span>0B<sp
 <span class="o">[</span>root@node61<span class="w"> </span>~<span class="o">]</span><span class="c1"># echo &quot;ssscccc&quot; | tr -d &quot;s&quot;</span>
 cccc
 <span class="o">[</span>root@node61<span class="w"> </span>~<span class="o">]</span><span class="c1"># </span>
+</pre></div>
+</div>
+</section>
+<section id="linux">
+<h2>Linux 定时器<a class="headerlink" href="#linux" title="此标题的永久链接"></a></h2>
+<p>首先确定   有没有 crontab  服务</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">service</span> <span class="n">crond</span> <span class="n">status</span> <span class="o">//</span><span class="n">查看状态</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>命令行输入:crontab<span class="w"> </span>-e<span class="w"> </span>进入后编写想要执行的脚本
+
+
+*/1<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/.....<span class="w"> </span>每一分钟执行一次
+*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/.....<span class="w"> </span>每五分钟执行一次
+<span class="m">0</span><span class="w"> </span>*/1<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/.....<span class="w"> </span>每小时执行一次
+<span class="m">30</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/.....<span class="w"> </span>每天1:30执行一次
+<span class="m">0</span><span class="w"> </span><span class="m">23</span>-7/2，8<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>晚上11点到早上8点之间每两个小时和早上八点
+<span class="m">0</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>*<span class="w"> </span><span class="m">1</span>-3<span class="w"> </span>每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点
+<span class="m">22</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">0</span><span class="w"> </span>每星期（周日凌晨4：22）执行
+<span class="m">42</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>每月（1号凌晨4：42）去执行
 </pre></div>
 </div>
 </section>
