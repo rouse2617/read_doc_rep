@@ -34,6 +34,8 @@ memchr
    p = (char*)memchr(str, ch, strlen(str));
    printf("%s",p);
 
+
+
 prctl 
 ~~~~~
 .. highlight:: sh
