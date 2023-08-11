@@ -54,6 +54,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">C/C++语法方面</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ftruncate">ftruncate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#memchr">memchr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prctl">prctl</a></li>
 </ul>
 </li>
 </ul>
@@ -130,6 +131,17 @@ void<span class="w"> </span>*memchr<span class="o">(</span>const<span class="w">
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
 <span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">memchr</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">));</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="n">p</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="prctl">
+<h2>prctl<a class="headerlink" href="#prctl" title="此标题的永久链接"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>用来控制进程的函数（例如：修改进程的名字等等等，功能强大）
+<span class="c1">#include &lt;sys/prctl.h&gt;</span>
+第一个参数是描述<span class="w"> </span>要做什么（参数选项太多了），跟据第一个参数不同，其他的参数功能也不同
+
+int<span class="w"> </span>prctl<span class="o">(</span>int<span class="w"> </span>option,<span class="w"> </span>unsigned<span class="w"> </span>long<span class="w"> </span>arg2,<span class="w"> </span>unsigned<span class="w"> </span>long<span class="w"> </span>arg3,
+<span class="w">         </span>unsigned<span class="w"> </span>long<span class="w"> </span>arg4,<span class="w"> </span>unsigned<span class="w"> </span>long<span class="w"> </span>arg5<span class="o">)</span><span class="p">;</span>
 </pre></div>
 </div>
 </section>

@@ -34,4 +34,14 @@ memchr
    p = (char*)memchr(str, ch, strlen(str));
    printf("%s",p);
 
-   
+prctl 
+~~~~~
+.. highlight:: sh
+::
+
+   用来控制进程的函数（例如：修改进程的名字等等等，功能强大）
+   #include <sys/prctl.h>
+   第一个参数是描述 要做什么（参数选项太多了），跟据第一个参数不同，其他的参数功能也不同
+    
+   int prctl(int option, unsigned long arg2, unsigned long arg3,
+            unsigned long arg4, unsigned long arg5);  
