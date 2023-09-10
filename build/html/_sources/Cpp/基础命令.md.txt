@@ -6,6 +6,37 @@
 
 >   记录常用的Linux命令
 
+### jq 格式化 json
+
+有时候经常看到  一大串连续json 文件， 阅读性很差，在linux 中自带 fomat json的工具
+
+
+```shell
+//  解析前
+[root@node85 wengine]# cat ppp.json 
+{"osds": [{"ip": "10.1.23.87", "port": 11200, "zone": 3, "nr_vnodes": 128, "capacity": 107374182400, "rackid": 1, "cache_size": 0, "osd_cache_disk_id": "", "storageRole": "mainstorage", "diskType": "hdd"}]}
+[root@node85 wengine]# 
+
+//用 jq 解析后
+[root@node85 wengine]# cat ppp.json | jq
+{
+  "osds": [
+    {
+      "ip": "10.1.23.87",
+      "port": 11200,
+      "zone": 3,
+      "nr_vnodes": 128,
+      "capacity": 107374182400,
+      "rackid": 1,
+      "cache_size": 0,
+      "osd_cache_disk_id": "",
+      "storageRole": "mainstorage",
+      "diskType": "hdd"
+    },
+  ]
+}
+```
+
 
 ### Linux执行脚本报错: invalid option 2
 
@@ -17,7 +48,6 @@ set ff
 set ff=unix
 ```
 
-### 
 
 ###  统计全部文件行数
 
